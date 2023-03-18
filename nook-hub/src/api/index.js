@@ -1,6 +1,5 @@
 import axios from 'axios';
-
-const url = 'https://acnhapi.com/v1a';
+import { url } from '../constants'
 
 export const fetchFishData = async(id) => {
     try {
