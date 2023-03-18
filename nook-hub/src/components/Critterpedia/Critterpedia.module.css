@@ -1,3 +1,16 @@
 .tabLabel {
     font-weight: bold;
 }
+
+.AppBar {
+    background-color: #74e0aa; 
+    color: #646665;
+}
+
+.Box {
+    width: 100%;
+}
+
+.Tab {
+    font-weight: bold;
+}

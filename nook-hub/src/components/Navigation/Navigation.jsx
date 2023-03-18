@@ -51,7 +51,7 @@ const Navigation = () => {
         PaperProps={{
           sx: {
             backgroundColor: "#83d7df",
-            width: "10rem",
+            width: "15rem",
             marginleft: "1rem"
           }
         }}
@@ -77,7 +77,7 @@ const Navigation = () => {
           <Link to="/critterpedia">
             <ListItemIcon  onClick={handleDrawerClose} className={styles.navigationItem}>
               <img className={styles.iconButton} src={fishIcon} alt="fish icon" />
-              <Typography className={styles.menuText}>Citterpedia</Typography>
+              <Typography className={styles.menuText}>Critterpedia</Typography>
             </ListItemIcon>
           </Link>
         </ListItem>

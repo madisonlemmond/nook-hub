@@ -34,9 +34,6 @@ const App = () => {
       <div className={styles.title}>
           <h1 >Nook Hub</h1>
       </div>
-    
-    
-      
       <Routes>
         <Route exact={true} path="/" element={<Home/>}/>
         

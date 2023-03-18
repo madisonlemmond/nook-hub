@@ -5,6 +5,8 @@ import Box from '@mui/material/Box';
 
 import { useState } from 'react';
 
+import styles from './Critterpedia.module.css';
+
 const Critterpedia = () => {
     const [data, setData] = useState([]);
     const [value, setValue] = useState(0);
@@ -35,9 +37,9 @@ const Critterpedia = () => {
             centered
         
           >
-            <Tab label="Fish" sx={{fontWeight: 'bold'}} onClick={handleClick} />
-            <Tab label="Bugs" sx={{fontWeight: 'bold'}} onClick={handleClick} />
-            <Tab label="Sea Creatures" sx={{fontWeight: 'bold'}} onClick={handleClick} />
+            <Tab label="Fish" className={styles.Tab} onClick={handleClick} />
+            <Tab label="Bugs" className={styles.Tab} onClick={handleClick} />
+            <Tab label="Sea Creatures" className={styles.Tab} onClick={handleClick} />
           </Tabs>
         </AppBar>
         </Box>
