@@ -1,27 +1,47 @@
-import React from 'react'
-import { ReactDOM } from 'react';
+import React, { useState, useEffect } from 'react';
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useHistory,
+} from 'react-router-dom';
 import './App.css';
 import { fetchFishData, fetchAllFishData } from './api';
+import FishList from './components/FishList';
+import Navigation from './components/Navigation/Navigation';
 
-class App extends React.Component {
-  state = {
-      data: [{}],
-  }
+const App = () => {
+  // const [data, setData] = useState([]);
 
-  async componentDidMount() {
-      const fetchedData = await fetchAllFishData();
-      console.log(fetchedData)
-      this.setState({data: fetchedData});
-  }
-  render() {
-    const { data } = this.state
-    console.log(data)
+
+  // useEffect(() => {
+  //   const fetchedData = fetchAllFishData();
+  //   console.log(fetchedData)
+  //   this.setData({fetchedData});
+  // }, [])
+     
+  const Home = () => {
     return (
-      data.map((data) => (
-        <div>{data.price}</div>
-      ))
+      <div className="Home">
+      </div>
     );
-  }
+  };
+
+  return (
+    <Router>
+      <Navigation />
+      <Routes>
+        <Route exact={true} path="/" element={<Home/>}/>
+        
+        <Route path="/fish"  element={<FishList/>}/>
+        
+      </Routes>
+    </Router>
+  );
+    return (
+      <FishList />
+    );
+
 }
 
 export default App;
