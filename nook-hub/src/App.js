@@ -7,8 +7,9 @@ import {
 } from 'react-router-dom';
 
 import { fetchFishData, fetchAllFishData } from './api';
-import FishList from './components/FishList';
+import FishList from './components/FishList/FishList';
 import Navigation from './components/Navigation/Navigation';
+import Critterpedia from './components/Critterpedia/Critterpedia';
 import styles from './App.module.css';
 
 const App = () => {
@@ -23,26 +24,27 @@ const App = () => {
      
   const Home = () => {
     return (
-      <div className={styles.title}>
-        <h1>Nook Hub</h1>
-      </div>
+      <div></div>
     );
   };
 
   return (
     <Router>
-      <Navigation />
+      <Navigation className={styles.nav}/>
+      <div className={styles.title}>
+          <h1 >Nook Hub</h1>
+      </div>
+    
+    
+      
       <Routes>
         <Route exact={true} path="/" element={<Home/>}/>
         
-        <Route path="/fish"  element={<FishList/>}/>
+        <Route path="/critterpedia"  element={<Critterpedia/>}/>
         
       </Routes>
     </Router>
   );
-    return (
-      <FishList />
-    );
 
 }
 

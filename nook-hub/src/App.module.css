@@ -2,8 +2,12 @@ body {
     background-color: 	#f6eee1;
 }
 
+.nav {
+    display: flex;
+}
+
 .title {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     color: #c48d3f
 }

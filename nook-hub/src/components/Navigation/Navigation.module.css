@@ -1,6 +1,10 @@
 body {
     background-color: 	#f6eee1;
 }
+
+.navBar {
+    display: flex;
+}
 .navigationItem {
     display: inline-flex!important;
     align-items: center;

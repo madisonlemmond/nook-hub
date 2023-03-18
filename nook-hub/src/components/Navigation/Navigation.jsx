@@ -74,10 +74,10 @@ const Navigation = () => {
           </Link>
         </ListItem>
         <ListItem>
-          <Link to="/fish">
+          <Link to="/critterpedia">
             <ListItemIcon  onClick={handleDrawerClose} className={styles.navigationItem}>
               <img className={styles.iconButton} src={fishIcon} alt="fish icon" />
-              <Typography className={styles.menuText}>Fish</Typography>
+              <Typography className={styles.menuText}>Citterpedia</Typography>
             </ListItemIcon>
           </Link>
         </ListItem>
