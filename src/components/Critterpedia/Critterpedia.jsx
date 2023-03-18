@@ -37,9 +37,9 @@ const Critterpedia = () => {
             centered
         
           >
-            <Tab label="Fish" className={styles.Tab} onClick={handleClick} />
-            <Tab label="Bugs" className={styles.Tab} onClick={handleClick} />
-            <Tab label="Sea Creatures" className={styles.Tab} onClick={handleClick} />
+            <Tab label="Fish" sx={{fontWeight: "bold"}} onClick={handleClick} />
+            <Tab label="Bugs" sx={{fontWeight: "bold"}} onClick={handleClick} />
+            <Tab label="Sea Creatures" sx={{fontWeight: "bold"}} onClick={handleClick} />
           </Tabs>
         </AppBar>
         </Box>
