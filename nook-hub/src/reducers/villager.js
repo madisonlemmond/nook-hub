@@ -1,5 +1,10 @@
 import { getVillagerActionType } from "../constants"
 
+const initialError = {
+    statusCode: 0,
+    message: '',
+}
+
 const initialState = {
     id: 0,
     filename: '',
@@ -16,12 +21,7 @@ const initialState = {
     error: initialError
 }
 
-const initialError = {
-    statusCode: 0,
-    message: '',
-}
-
-export function villagersReducer (state = intitialState, action) {
+export default function villagersReducer(state = initialState, action) {
     switch(action.type) {
         
         case getVillagerActionType.OPERATION: return getVillagerLoading(state, action.response)
