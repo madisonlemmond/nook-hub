@@ -1,6 +1,7 @@
-import {Drawer, IconButton, Divider, ListItem, List, Icon, ListItemButton} from '@mui/material';
+import {Drawer, IconButton, Divider, ListItem, List, ListItemIcon, ListItemButton, Typography} from '@mui/material';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import MenuIcon from '@mui/icons-material/Menu'
+import HomeIcon from '@mui/icons-material/Home';
 import { Link } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import {  fetchFishData } from '../../api/index';
@@ -47,25 +48,41 @@ const Navigation = () => {
         <MenuIcon />
       </IconButton>
       <Drawer
+        PaperProps={{
+          sx: {
+            backgroundColor: "#83d7df",
+            width: "10rem",
+            marginleft: "1rem"
+          }
+        }}
         variant="persistent"
         open={open}
         anchor={"left"}
         onClose={() => handleDrawerClose}
       >
-        <Divider/>
+        
         <List>
         <IconButton onClick={handleDrawerClose}>
           <ChevronLeftIcon />
         </IconButton>
         <ListItem>
-        <Link to="/fish">
-          <ListItemButton  onClick={handleDrawerClose} >
-            <img className={styles.iconButton} src={fishIcon} alt="fish icon" />
-          </ListItemButton>
-        </Link>
+          <Link to="/">
+            <ListItemIcon onClick={handleDrawerClose} className={styles.navigationItem}>
+              <HomeIcon className={styles.iconButton} />
+              <Typography className={styles.menuText}>Home</Typography>
+            </ListItemIcon>
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link to="/fish">
+            <ListItemIcon  onClick={handleDrawerClose} className={styles.navigationItem}>
+              <img className={styles.iconButton} src={fishIcon} alt="fish icon" />
+              <Typography className={styles.menuText}>Fish</Typography>
+            </ListItemIcon>
+          </Link>
         </ListItem>
         </List>
-        <Divider/>
+        
       </Drawer>
     </div>
   );

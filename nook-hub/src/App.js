@@ -5,10 +5,11 @@ import {
   Routes,
   useHistory,
 } from 'react-router-dom';
-import './App.css';
+
 import { fetchFishData, fetchAllFishData } from './api';
 import FishList from './components/FishList';
 import Navigation from './components/Navigation/Navigation';
+import styles from './App.module.css';
 
 const App = () => {
   // const [data, setData] = useState([]);
@@ -22,7 +23,8 @@ const App = () => {
      
   const Home = () => {
     return (
-      <div className="Home">
+      <div className={styles.title}>
+        <h1>Nook Hub</h1>
       </div>
     );
   };

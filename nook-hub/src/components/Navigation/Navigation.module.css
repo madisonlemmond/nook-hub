@@ -1,4 +1,30 @@
-.iconButton {
-   height: 3rem;
-   width: 3rem;
+body {
+    background-color: 	#f6eee1;
 }
+.navigationItem {
+    display: inline-flex!important;
+    align-items: center;
+    justify-content: space-around!important;
+}
+
+.iconButton {
+   height: 2rem;
+   width: 2rem;
+   margin-right: 1rem;
+}
+
+.menuText {
+    font-weight: bold!important;
+    color: #646665;
+}
+
+a:link { text-decoration: none; }
+
+
+a:visited { text-decoration: none; }
+
+
+a:hover { text-decoration: none; }
+
+
+a:active { text-decoration: none; }

@@ -1,0 +1,9 @@
+body {
+    background-color: 	#f6eee1;
+}
+
+.title {
+    display: flex;
+    justify-content: space-around;
+    color: #c48d3f
+}
