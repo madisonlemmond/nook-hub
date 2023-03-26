@@ -10,3 +10,10 @@ export const getVillagerActionType = {
     SUCCESS: 'getVillagerSuccess',
     ERROR: 'getVillagerError'
 }
+
+// Fish reducer
+export const getFishActionType = {
+    OPERATION: 'getFishLoading',
+    SUCCESS: 'getFishSuccess',
+    ERROR: 'getFishError'
+}

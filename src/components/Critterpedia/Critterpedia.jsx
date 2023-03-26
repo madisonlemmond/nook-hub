@@ -2,6 +2,7 @@ import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import { fetchAllFishData } from '../../api';
 
 import { useState } from 'react';
 
@@ -13,15 +14,31 @@ const Critterpedia = () => {
 
 
     const handleChange = (event, newValue) => {
-        setValue(newValue);
-        console.log(event)
+      console.log(newValue)
+      switch (newValue) {
+        case 0:
+          const fetchAPI = async () => {
+            setData(await(fetchAllFishData()));
+          };
+          fetchAPI();
+          break;
+        case 1:
+          break;
+        default:
+          break;
+
       }
 
+     
+      setValue(newValue);
+
+      console.log(data)
+    }
+
     const handleClick = (e) => {
-        console.log(e.target)
     }   
 
-    return (
+    return data && (
         <div>
         <Box sx={{width: '100%'}}>
         <AppBar position="static" sx={{backgroundColor: '#74e0aa', color: '#646665'}}>
@@ -43,6 +60,7 @@ const Critterpedia = () => {
           </Tabs>
         </AppBar>
         </Box>
+        
         </div>
     
     )
