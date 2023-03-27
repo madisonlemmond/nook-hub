@@ -30,8 +30,6 @@ const Navigation = () => {
 
   const handleClick = async () => {
    const data = await fetchFishData('sea_bass').then((res) => {
-    console.log(res)
-
       return res.data.icon_uri;
    });
    return data.icon_uri;
@@ -68,7 +66,7 @@ const Navigation = () => {
         <ListItem>
           <Link to="/">
             <ListItemIcon onClick={handleDrawerClose} className={styles.navigationItem}>
-              <HomeIcon className={styles.iconButton} />
+              <img className={styles.iconButton} src="/acnh-home-icon.png"/>
               <Typography className={styles.menuText}>Home</Typography>
             </ListItemIcon>
           </Link>
@@ -78,6 +76,14 @@ const Navigation = () => {
             <ListItemIcon  onClick={handleDrawerClose} className={styles.navigationItem}>
               <img className={styles.iconButton} src={fishIcon} alt="fish icon" />
               <Typography className={styles.menuText}>Critterpedia</Typography>
+            </ListItemIcon>
+          </Link>
+        </ListItem>
+        <ListItem>
+          <Link to="/">
+            <ListItemIcon  onClick={handleDrawerClose} className={styles.navigationItem}>
+              <img className={styles.iconButton} src="/acnh-fossil-icon.png" alt="museum icon" />
+              <Typography className={styles.menuText}>Museum</Typography>
             </ListItemIcon>
           </Link>
         </ListItem>

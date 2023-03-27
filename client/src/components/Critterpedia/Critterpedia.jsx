@@ -2,40 +2,42 @@ import AppBar from '@mui/material/AppBar';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import Box from '@mui/material/Box';
+import FishList from '../FishList/FishList';
 import { fetchAllFishData } from '../../api';
 
 import { useState } from 'react';
 
 import styles from './Critterpedia.module.css';
+import { useEffect } from 'react';
 
 const Critterpedia = () => {
     const [data, setData] = useState([]);
     const [value, setValue] = useState(0);
 
 
-    const handleChange = (event, newValue) => {
-      console.log(newValue)
-      switch (newValue) {
-        case 0:
-          const fetchAPI = async () => {
+    useEffect(() => {
+      const fetchAPI = async () => {
+        switch (value) {
+          case 0:
             setData(await(fetchAllFishData()));
-          };
-          fetchAPI();
-          break;
-        case 1:
-          break;
-        default:
-          break;
+            break;
+          case 1:
+            setData([]);
+            break;
+          case 2:
+            setData([]);
+        }
+      };
 
-      }
+      fetchAPI();
+    }, [value]);
 
-     
+    const handleChange = (event, newValue) => {
       setValue(newValue);
-
-      console.log(data)
     }
 
     const handleClick = (e) => {
+      console.log(e.target.value)
     }   
 
     return data && (
@@ -60,6 +62,7 @@ const Critterpedia = () => {
           </Tabs>
         </AppBar>
         </Box>
+        <FishList fishData={data} />
         
         </div>
     

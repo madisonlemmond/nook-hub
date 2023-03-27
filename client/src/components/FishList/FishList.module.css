@@ -1,5 +1,7 @@
 .card {
-    background: #f6eee1;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 body {

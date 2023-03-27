@@ -1,0 +1,53 @@
+.titleContainer {
+    display: flex;
+    justify-content: center;
+    height: 3rem;
+    padding-top: 1rem;
+    background: #83d7df;
+}
+
+.icon {
+    height: 2rem;
+    width: 2rem;
+    margin-right: 1rem;
+}
+
+.fishName {
+    color: #646665;
+    font-weight: bold!important;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+}
+
+.fishDetails {
+    padding: 1rem;
+    color: #646665;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail {
+    margin: 0.25rem!important;
+}
+
+
+.buttonIcons {
+    height: 2rem;
+}
+
+.actionButton {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: space-around;
+    /* background: #83d7df;
+    height: 3rem;
+    padding-bottom: 1rem; */
+}
